@@ -1,0 +1,379 @@
+version: "2.0"
+
+nlu:
+- intent: room_book
+  examples: |
+    - i want to book a room
+    - i want to book room
+    - I want to book a room
+    - I want to book room
+    - I just want a room
+    - I just want to book a room
+    - i want a room for my stay
+    - I want room for my stay
+    - I would like to book a room
+    - i would like to book room
+    - i would like to book rooms
+    - i would like to book room for my stay
+    - can you book a room?
+    - can you book room?
+    - i need a room
+    - i need room
+    - room book
+    - book rooms
+    - book room
+    - room for stay
+    - book the room
+    - book the rooms
+    - book a room
+    - Book a room for me
+    - Book the room
+    - Book the rooms
+    - Book room
+    - book rooms
+    - Is there any room available?
+    - Is there any room available for me?
+    - Is there any room available for my stay
+    - Is there any room available for me
+    - Is there any room available
+    - room available?
+    - rooms available?
+    
+
+- intent: room_by_numbers
+  examples: |
+    - i want to book 2 rooms
+    - i would like to book 2 rooms
+    - i need 2 rooms
+    - i just need 2 room
+    - i want to book 2 room
+    - i need 2 rooms to book
+    - i need only 1 room
+    - i would like to book only 1 room
+    - book 1 room for me
+    - book 2 rooms for me
+    
+
+- intent: number_of_rooms
+  examples: |
+    - 1
+    - 2
+
+- intent: room_type
+  examples: |
+    - Simple
+    - Deluxe
+    
+
+- intent: clean_room
+  examples: |
+    - i just want to have my room cleaned
+    - send someone to clean the room
+    - clean room
+    - clean the room
+    - clean my room
+    - please clean my room
+    - room needs to be cleaned
+    - my room needs to be cleaned
+    - ask someone to clean my room
+    - send someone to clean my room
+    - i would like to have my room cleaned
+    - request you to send someone to clean the room
+    - room cleaning
+    - my room should be clean
+    - can you send someone to clean the room?
+    - can you ask someone to clean my room
+    
+
+- intent: room_cleaning_now
+  examples: |
+    - now
+    - rightnow
+    - just now
+    - right now
+    - urgently 
+    - urgent
+    - quickly
+    - could you send someone right now
+    - could you send someone right quickly
+    - can you send someone now
+    - can you send someone quickly
+    - can you send someone just now
+    - could you send someone now
+    - can you send someone right now
+    - send some right now
+    - send some right quickly
+    - send someone urgently
+    - require now
+    - require urgently
+    - require someone now
+    - require someone urgently
+    - its urgent
+    - send him right now
+    - send him urgently
+    - send someone as soon as possible
+    - send someone ASAP
+    - can you send someone as soon as possible
+    - requirement is urgent
+    
+- intent: room_cleaning_time
+  examples: |
+    - send him after 2 hours
+    - send someone after 2 hours   
+    - send someone after 4 hours    
+    - send him after 2 hours    
+    - could you send someone after 2 hours?
+    - can you send someone after 2 hours?  
+    - schedule it after 3 hour
+    - send after 5 hour 
+    - please send after 1 hour
+    
+- intent: faq_checkin_timing
+  examples: |
+    - what are your check-in timings?
+    - tell me your check-in timings
+    - check in time
+    - check in timing
+    - may i know your check in time?
+    - i want to know your check in time?
+    - i want to know your check in timing?   
+    - what is the check-in time?
+    - what is the check in time?
+    - tell your check-in timings
+    - when check in ?
+    - check in?
+    - check-in?
+    - i want to check in. can you tell me check in timing?
+    - i want to check in. please tell me check in timing?  
+    - want to know check in time
+    - i just want to know check in time
+    - i want to know check in time
+    
+- intent: faq_checkout_timing
+  examples: |
+    - what are your check-out timings?
+    - tell me your check-out timings
+    - check out time
+    - check out timing
+    - may i know your check out time?
+    - i want to know your check out time?
+    - i want to know your check out timing?   
+    - what is the check-out time?
+    - what is the check out time?
+    - tell your check-out timings
+    - when check out ?
+    - check out?
+    - check-out?
+    - i want to check out. can you tell me check out timing?
+    - i want to check out. please tell me check out timing?  
+    - want to know check out time
+    - i just want to know check out time
+    - i want to know check out time
+    
+- intent: faq_cancel_reservation
+  examples: |
+    - cancel my reservation
+    - reservation cancellation
+    - i want to cancel my reservation
+    - can you cancel my reservation?
+    - can you please cancel my reservation?     
+    - i want to cancel the reservation that i made
+    - cancel my reservation that i made earlier
+    - please cancel my earlier reservation
+    - i would like to cancel my reservation      
+    - can i cancel my reservation?
+    - how do i cancel my reservation?
+    - please cancel my reservation
+    - i request you to cancel the reservation that i made
+    - it would be great if you could cancel my reservation
+    - i request you to cancel the reservation that i made earlier
+    - i request you to cancel the my earlier reservation
+    
+ 
+- intent: faq_cancellation_policy
+  examples: |
+    - cancellation policy
+    - what is your cancellation policy?
+    - can you tell me about cancellation policy?
+    - can you tell me about your cancellation policy?
+    - i would like to know about cancellation policy
+    - i want to know about cancellation policy
+    - can you state your cancellation policy?
+    - want to see your cancellation policy
+    - want to see cancellation policy
+    - i want to see cancellation policy
+    - where is your cancellation policy?
+    - where is cancellation policy?
+    
+- intent: faq_check_restaurant
+  examples: |
+    - does the hotel have a restaurant?
+    - does your hotel have a restaurant?
+    - does hotel have a restaurant?   
+    - do you have restaurant?
+    - is there any restaurant?
+    - is there a restaurant?
+    - is there any restaurant in the hotel?
+    - is there any restaurant in this hotel?
+    - is there any restaurant in hotel?
+    - tell me about the restaurant
+    - can you tell me about the restaurant?
+    - i would like to know about the restaurant
+    - are there restaurants in the hotel?
+    - number of restaurants?
+    - can i find restaurants here?
+    - i heard a restaurant is also there in the hotel
+    - i heard that there is restaurant in hotel
+    - i want to know about the restaurant
+    - i want to know about the restaurant in this hotel
+    - i want to know about the restaurant in hotel
+    - information about the restaurant
+    - where is restaurant?
+    - can i find a restaurant here?
+
+- intent: faq_check_breakfast
+  examples: |
+    - does the hotel offer breakfast?
+    - does the hotel provide breakfast?
+    - does hotel have any breakfast facility?
+    - is breakfast facility available?
+    - is breakfast is there?
+    - is breakfast there?
+    - do you provide breakfast?
+    - what about breakfast?
+    - breakfast?
+    - i want to have breakfast
+    - i want breakfast
+    - do you serve breakfast
+    - breakfast availability
+    - is breakfast is available?
+    - is there any breakfast facility available?
+    
+- intent: faq_time_breakfast
+  examples: |
+    - breakfast timings?
+    - want to know breakfast timing
+    - i want to know about breakfast timing
+    - i want to know breakfast time
+    - can you tell me about breakfast timing?
+    - please tell me about breakfast time
+    - At what time you serve the breakfast?
+    - i want to know about breakfast timing
+    - want to know about breakfast timing
+    - what is the time for breakfast?
+    - time for doing breakfast?
+    - what are the breakfast timings?
+    - timing of breakfast
+    - time for breakfast
+    - time of breakfast
+    - you serve breakfast at what time?
+    - which time is the breakfast served?    
+    - At which time is the breakfast served?
+    - breakfast timings what are they?
+    
+- intent: faq_time_restaurant
+  examples: |
+    - restaurant timings?
+    - want to know restaurant timing
+    - i want to know about restaurant timing
+    - i want to know restaurant time
+    - can you tell me about restaurant timing?
+    - please tell me about restaurant time
+    - At what time you serve the restaurant?
+    - i want to know about restaurant timing
+    - want to know about restaurant timing
+    - what is the time for restaurant?
+    - time for doing restaurant?
+    - what are the restaurant timings?
+    - timing of restaurant
+    - time for restaurant
+    - time of restaurant
+    - you serve restaurant at what time?
+    - which time is the restaurant served?    
+    - At which time is the restaurant served?
+    - restaurant timings what are they? 
+    
+- intent: greet
+  examples: |
+    - hii
+    - hi
+    - hey
+    - hello
+    - good morning
+    - good evening
+    - hey there
+    - hello there
+    
+- intent: affirm
+  examples: |
+    - sure!
+    - sure
+    - of course
+    - ok
+    - okay
+    - yes
+    - indeed
+    - definitely  
+    
+- intent: deny
+  examples: |
+    - no
+    - impossible                 
+    - never
+    - dont think so
+    - no way
+    - can not
+    - can't
+    
+    
+- intent: goodbye
+  examples: |
+    - bye
+    - have a nice day
+    - good bye
+    - have fun
+    - take care 
+    
+- synonym: room
+  examples: |
+    - Rooms
+    - rooms
+    - Room
+    
+- synonym: restaurant
+  examples: |
+    - restaurants
+    - Restaurants
+    - resturant
+    - Restaurante
+    - restaurante
+    - restraunts
+    - restraunt
+    - resturants
+    - Resteraunts
+    - Restaurantes
+    - resteraunts
+    - resataraunt
+    - Resteraunt
+    
+    
+- synonym: Simple
+  examples: |
+    - simple
+    - simpl
+    
+- synonym: Deluxe
+  examples: |
+    - deluxe
+    - delux   
+    
+
+      
+             
+    
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

@@ -1,0 +1,293 @@
+version: "2.0"
+
+stories:
+
+- story: book room and affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: book_room{"location":"room"}   
+  - action: form_book_room
+  - action: form{"name":"form_book_room"}
+  - action: form{"name":null}
+  - action: action_reset_slots
+  - intent: affirm
+  - action: utter_goodbye
+  
+  
+- story: book room1 and affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: room_by_numbers{"location":"room", "number":"1"}  
+  - action: slot{"number":"1"}
+  - action: form_book_room_number
+  - action: form{"name":"form_book_room_number"}
+  - action: form{"name":null}
+  - action: action_reset_slots
+  - intent: affirm
+  - action: utter_goodbye 
+  
+  
+- story: book room deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: book_room{"location":"room"} 
+  - action: form_book_room
+  - action: form{"name":"form_book_room"}
+  - action: form{"name":null}
+  - action: action_reset_slots
+  - intent: deny
+  - action: utter_deny_message 
+  
+  
+- story: book room1 deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: room_by_numbers{"location":"room", "number":"1"}
+  - action: slot{"number":"1"}
+  - action: form_book_room_number
+  - action: form{"name":"form_book_room_number"}
+  - action: form{"name":null}
+  - action: action_reset_slots
+  - intent: deny
+  - action: utter_deny_message
+  
+  
+- story: book room2 and affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: room_by_numbers{"location":"room", "number":"2"}  
+  - action: slot{"number":"2"}
+  - action: form_book_room_number
+  - action: form{"name":"form_book_room_number"}
+  - action: form{"name":null}
+  - action: action_reset_slots
+  - intent: affirm
+  - action: utter_goodbye 
+  
+  
+- story: book room2 deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: room_by_numbers{"location":"room", "number":"2"}
+  - action: slot{"number":"2"}
+  - action: form_book_room_number
+  - action: form{"name":"form_book_room_number"}
+  - action: form{"name":null}
+  - action: action_reset_slots
+  - intent: deny
+  - action: utter_deny_message     
+  
+ 
+- story: clean room affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: clean_room{"location":"room"}
+  - action: utter_clean_room
+  - intent: room_cleaning_now
+  - action: utter_room_cleaning_now
+  - intent: affirm
+  - action: utter_goodbye
+  
+  
+- story: clean room deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: clean_room{"location":"room"}
+  - action: utter_clean_room
+  - intent: room_cleaning_now
+  - action: utter_room_cleaning_now
+  - intent: deny
+  - action: utter_deny_message 
+  
+  
+- story: clean room time affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: clean_room{"location":"room"}
+  - action: utter_clean_room
+  - intent: room_cleaning_time
+  - action: utter_room_cleaning_time
+  - intent: affirm
+  - action: utter_goodbye 
+  
+- story: clean room time deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: clean_room{"location":"room"}
+  - action: utter_clean_room
+  - intent: room_cleaning_time
+  - action: utter_room_cleaning_time
+  - intent: deny
+  - action: utter_deny_message      
+  
+
+- story: checkin timing deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_checkin_timing
+  - action: utter_checkin_timing
+  - intent: deny
+  - action: utter_deny_message
+  
+
+- story: checkin timing affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_checkin_timing
+  - action: utter_checkin_timing
+  - intent: affirm
+  - action: utter_goodbye
+  
+ 
+- story: checkout timing deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_checkout_timing
+  - action: utter_checkout_timing
+  - intent: deny
+  - action: utter_deny_message
+  
+
+- story: checkout timing affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_checkout_timing
+  - action: utter_checkout_timing
+  - intent: affirm
+  - action: utter_goodbye
+  
+  
+- story: cancel reservation affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_cancel_reservation
+  - action: utter_cancel_reservation
+  - intent: affirm
+  - action: utter_goodbye    
+  
+
+- story: cancel reservation deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_cancel_reservation
+  - action: utter_cancel_reservation
+  - intent: deny
+  - action: utter_deny_message
+  
+  
+- story: cancellation policy deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_cancellation_policy
+  - action: utter_cancellation_policy
+  - intent: deny
+  - action: utter_deny_message
+  
+  
+- story: cancellation policy affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_cancellation_policy
+  - action: utter_cancellation_policy
+  - intent: affirm
+  - action: utter_goodbye
+  
+  
+- story: checking restaurant affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_check_restaurant
+  - action: utter_check_restaurant
+  - intent: affirm
+  - action: utter_goodbye 
+  
+- story: checking restaurant deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_check_restaurant
+  - action: utter_check_restaurant
+  - intent: deny
+  - action: utter_deny_message
+  
+- story: checking breakfast deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_check_breakfast
+  - action: utter_check_breakfast
+  - intent: deny
+  - action: utter_deny_message        
+  
+  
+- story: checking breakfast affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_check_breakfast
+  - action: utter_check_breakfast
+  - intent: affirm
+  - action: utter_goodbye
+  
+- story: checking breakfast timing deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_time_breakfast
+  - action: utter_time_breakfast
+  - intent: deny
+  - action: utter_deny_message        
+  
+  
+- story: checking breakfast timing affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_time_breakfast
+  - action: utter_time_breakfast
+  - intent: affirm
+  - action: utter_goodbye    
+  
+  
+  
+  
+- story: checking restaurant timing affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_time_restaurant
+  - action: utter_time_restaurant
+  - intent: affirm
+  - action: utter_goodbye 
+  
+- story: checking restaurant timing deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_time_restaurant
+  - action: utter_time_restaurant
+  - intent: deny
+  - action: utter_deny_message  
+  
+  
+  
+

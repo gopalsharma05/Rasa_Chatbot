@@ -1,0 +1,159 @@
+version: "2.0"
+
+intents:
+    - greet
+    - affirm
+    - deny
+    - goodbye
+    - room_book
+    - number_of_rooms
+    - room_type
+    - book_number_room
+    - clean_room
+    - room_cleaning_now
+    - room_cleaning_time
+    - faq_checkin_timing:
+        triggers: action_checkin_timing
+    - faq_checkout_timing:
+        triggers: action_checkout_timing
+    - faq_cancel_reservation:
+        triggers: action_cancel_reservation
+    - faq_cancellation_policy:
+        triggers: action_cancellation_policy
+    - faq_check_restaurant:
+        triggers: action_check_restaurant
+    - faq_check_breakfast:
+        triggers: action_check_breakfast
+    - faq_time_breakfast:
+        triggers: action_time_breakfast
+    - faq_time_restaurant:
+        triggers: action_time_restaurant
+        
+        
+        
+       
+entities:
+    - number
+    - location
+    - room_type    
+    
+slots:
+  number:
+    type: unfeaturized
+  room_types:
+    type: unfeaturized
+        
+    
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Hey there! How can i help you?"
+
+  utter_submit:
+  - text: "Your room(s) have been booked. Number of {room_type} rooms booked : {number}"
+  
+  utter_ask_number:
+  - buttons:
+    - payload: /number_of_rooms{"number":"1"}
+      title: '1'
+    - payload: /number_of_rooms{"number":"2"}
+      title: '2'
+    text: "Select the number of rooms for your booking"
+    
+  utter_ask_room_type:
+  - buttons:
+    - payload: /room_type{"room_type":"Simple"}
+      title: Simple
+    - payload: /room_type{"room_type":"Deluxe"}
+      title: Deluxe
+    text: "please select your room type"
+    
+  utter_clean_room:
+  - text: When should I arrange for a cleaning?
+
+  utter_room_cleaning_now:
+  - text: Sure, I will send someone to your room right away.
+
+  utter_room_cleaning_time:
+  - text: Ok, we will send someone at that time
+  
+  utter_checkin_timing:
+  - text: Check-in time starts at 4 PM. Minimum check-in age is 21. Please contact
+      the reception for early check-in requests.
+
+  utter_checkout_timing:
+  - text: Check-out time is 11 AM. Please contact the reception for late checkout
+      requests.  
+      
+  utter_cancel_reservation:
+  - text: To cancel a reservation, select the “Reservations” link from the homepage.
+  - text: On the Reservations page, under the heading ‘View, Change or Cancel a Reservation,’enter
+      your confirmation number, and either the last name on the reservation or the
+      last four digits of the credit card used to make the reservation.
+      
+  utter_cancellation_policy:
+  - text: The booking deposit is refundable if the cancellation occurs at least 15
+      days before arrival. For cancellations made after this limit, a penalty will
+      be imposed based on the cancellation policy.
+      
+  utter_check_restaurant:
+  - text: Yes, the hotel has a restaurant called the Zephyr Bar. With our menu we
+      strive to reflect the historic art and the spirit of our neighborhood by offering
+      a glimpse into what makes our area unique.
+
+  utter_check_breakfast:
+  - text: The hotel provides its guests with a free made-to-order breakfast each morning.
+  
+  utter_time_breakfast:
+  - text: Monday through Friday breakfast is 6 am to 9 am. On Saturday and Sunday,
+          we are open from 7 am to 10:30 am.
+          
+  utter_time_restaurant:
+  - text: Our restaurant serves a dazzling 24-hour menu.
+  
+  utter_goodbye:
+  - text: Ok then! Have a good day!
+  
+  utter_deny_message:
+  - text: How can I help you?
+  utter_fallback_message:
+  - text: Sorry, I did not understand !        
+  
+  
+actions:
+    - action_reset_slots
+    - action_my_fallback
+    - action_checkin_timing
+    - action_checkout_timing
+    - action_cancel_reservation
+    - action_cancellation_policy
+    - action_check_restaurant
+    - action_check_breakfast
+    - action_time_breakfast
+    - action_restaurant_time
+    - utter_greet
+    - utter_submit
+    - utter_ask_number
+    - utter_ask_room_type
+    - utter_clean_room
+    - utter_room_cleaning_now
+    - utter_room_cleaning_time
+    - utter_checkin_timing
+    - utter_checkout_timing
+    - utter_cancel_reservation
+    - utter_cancellation_policy
+    - utter_check_restaurant
+    - utter_check_breakfast
+    - utter_time_breakfast
+    - utter_time_restaurant
+    - utter_goodbye
+    - utter_deny_message
+    
+forms:
+- form_book_room
+- form_book_room_number    
+    
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
