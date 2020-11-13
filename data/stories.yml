@@ -6,7 +6,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: book_room{"location":"room"}   
+  - intent: book_room 
   - action: form_book_room
   - action: form{"name":"form_book_room"}
   - action: form{"name":null}
@@ -19,7 +19,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: room_by_numbers{"location":"room", "number":"1"}  
+  - intent: room_by_numbers 
   - action: slot{"number":"1"}
   - action: form_book_room_number
   - action: form{"name":"form_book_room_number"}
@@ -33,7 +33,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: book_room{"location":"room"} 
+  - intent: book_room 
   - action: form_book_room
   - action: form{"name":"form_book_room"}
   - action: form{"name":null}
@@ -46,7 +46,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: room_by_numbers{"location":"room", "number":"1"}
+  - intent: room_by_numbers 
   - action: slot{"number":"1"}
   - action: form_book_room_number
   - action: form{"name":"form_book_room_number"}
@@ -60,7 +60,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: room_by_numbers{"location":"room", "number":"2"}  
+  - intent: room_by_numbers 
   - action: slot{"number":"2"}
   - action: form_book_room_number
   - action: form{"name":"form_book_room_number"}
@@ -74,7 +74,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: room_by_numbers{"location":"room", "number":"2"}
+  - intent: room_by_numbers 
   - action: slot{"number":"2"}
   - action: form_book_room_number
   - action: form{"name":"form_book_room_number"}
@@ -88,7 +88,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: clean_room{"location":"room"}
+  - intent: clean_room 
   - action: utter_clean_room
   - intent: room_cleaning_now
   - action: utter_room_cleaning_now
@@ -100,7 +100,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: clean_room{"location":"room"}
+  - intent: clean_room 
   - action: utter_clean_room
   - intent: room_cleaning_now
   - action: utter_room_cleaning_now
@@ -112,7 +112,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: clean_room{"location":"room"}
+  - intent: clean_room 
   - action: utter_clean_room
   - intent: room_cleaning_time
   - action: utter_room_cleaning_time
@@ -123,7 +123,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: clean_room{"location":"room"}
+  - intent: clean_room 
   - action: utter_clean_room
   - intent: room_cleaning_time
   - action: utter_room_cleaning_time
